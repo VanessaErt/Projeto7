@@ -1,0 +1,487 @@
+/* Importando fontes locais */
+@font-face {
+    font-family: 'Roboto';
+    src: url('/Roboto/Roboto-Medium.ttf');
+}
+
+:root {
+    --gold: #C7B084;
+    --white: #fff; 
+    --black: #0D070B;
+    --goldMaisescura: #9f8a5f;
+    --goldUmpoucomaisescura: #b5a072;
+    --goldUmpoucomaisclara: #d5b883;
+    --goldMaisclara: #D8C49C;
+    --pretoclaro: #1c1c1c;
+    --cinza: #BFB6B0;
+    --bejemaisclaro: #F2BC8D;
+    --cinzaescuro: #333333;
+    --cinzaclaro: #666;
+    --cinzamaisclaro: #ccc;
+    --cinzaclarinho: #f2f2f2;
+}
+
+/* Estilos para o navbar */
+.navbar {
+    background-color: var(--black);
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar img {
+    width: 200px;
+    height: auto;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; 
+}
+
+.navbar li {
+    margin-right: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a.active {
+    color: var(--gold);
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+/* Estilos para o carrossel */
+.carousel-item {
+    height: 100vh; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    right: 0;
+    transform: translateY(-50%); 
+    text-align: center; 
+    color: var(--white); 
+    width: 100%; 
+}
+
+/* Estilos para o carrossel */
+.carousel-caption h2 {
+    font-family: "Allison", cursive;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+}
+
+.carousel-caption p {
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption .btn {
+    background-color: var(--gold);  
+    color: var(--white);  
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 20px; 
+    text-decoration: none; 
+    animation-name: example;
+    animation-duration: 4s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes example {
+    0%   {background-color: var(--goldMaisescura)}
+    25%  {background-color: var(--goldUmpoucomaisescura)}
+    50%  {background-color: var(--goldUmpoucomaisclara)}
+    100% {background-color: var(--goldMaisclara)}
+}
+
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+    border: 2px solid transparent; 
+    border-color: var(--cinzaescuro);
+}
+
+.background-image:hover {
+    transform: scale(1.1); 
+    border-color: var(--cinzaescuro); 
+}
+
+.banner-fluid {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+}
+
+.banner-fluid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.8s ease; 
+}
+
+.banner-fluid img:hover {
+    transform: scale(1.1); 
+}
+
+/* Estilos para a página de contatos */
+.containerflex {
+    background-color: var(--goldMaisclara);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 600px; 
+}
+
+.contact-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+.contact-container form {
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+.contact-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: var(--goldUmpoucomaisescura);
+}
+
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+    width: calc(100% - 5px); 
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    border: 1px solid var(--goldMaisescura);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.contact-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-container input[type="submit"] {
+    background-color: var(--goldUmpoucomaisescura);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.contact-container input[type="submit"]:hover {
+    background-color: var(--goldUmpoucomaisclara);
+}
+
+/* Estilo Cardápio */
+.menu-section {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.menu-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--cinzaescuro);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.menu-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--cinzaescuro);
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: var(--cinzaclaro);
+    margin-bottom: 10px;
+}
+
+.menu-item .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cinzaescuro);
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos imagens da cafeteria */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    width: 100%; 
+    margin: 0 auto; 
+}
+
+.gallery-item {
+    flex: 0 0 calc(20% - 10px); 
+    max-width: 500px; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-bottom: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; 
+}
+
+.gallery-item:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+}
+
+/* Estilos avaliação */
+.avaliacoes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--cinzamaisclaro);
+}
+
+.avaliacao {
+    width: 300px;
+    padding: 20px;
+    background-color: var(--cinzaclarinho);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.avaliacao:hover {
+    transform: translateY(-10px);
+}
+
+.icon-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    border: 2px solid var(--cinzamaisclaro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-container {
+    font-size: 30px;
+    color: var(--goldMaisescura);
+    transition: transform 0.3s ease;
+}
+
+.icon-container:hover {
+    transform: rotateY(180deg);
+}
+
+.icon-container:hover .icon {
+    transform: rotateY(-180deg);
+}
+
+.avaliacao h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--cinzaescuro);
+}
+
+.avaliacao p {
+    font-size: 16px;
+    color: var(--cinzaclaro);
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+
+/* Estilos icon whatsapp */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000; 
+}
+
+/* Estilos para o Footer */
+footer {
+    background-color: var(--pretoclaro);
+    padding: 20px;
+    color: var(--white);
+    text-align: left;
+}
+
+footer p {
+    text-align: center;
+    color: var(--cinza);
+    margin: 0;
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.novidades, .footer-contact {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.novidades p {
+    text-align: left;
+}
+
+.footer-contact {
+    text-align: left;
+}
+
+.novidades h3, .footer-contact h3 {
+    margin-left: 160px;
+    font-size: 25px;
+}
+
+.footer-contact p, .novidades p {
+    color: var(--cinza);
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    line-height: 1.6; 
+    margin-left: 160px;
+}
+
+.footer-contact a {
+    color: var(--cinza); 
+    text-decoration: none; 
+}
+
+.footer-contact a:hover {
+    color: var(--bejemaisclaro);
+}
+
+.footer-contact i {
+    margin-right: 10px;
+    color: var(--white);
+}
+
+/* Estilos para os ícones das redes sociais */
+.redes-sociais {
+    display: flex;
+    gap: 10px; 
+    padding-left: 160px;
+}
+
+.social-icon {
+    font-size: 35px; 
+    color: var(--white); 
+}
+
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px); 
+    }
+    .gallery-item {
+        flex: 1 1 calc(50% - 10px); 
+        max-width: calc(50% - 10px); 
+    }
+    .background-image {
+        height: auto;
+        min-height: 300px; 
+    }
+}
+
+
+
