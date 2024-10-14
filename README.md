@@ -1,3 +1,20 @@
+# Atividade Prática: Site (tema livre)- Senac
+
+## Descrição
+
+O site apresenta informações sobre a cafeteria, incluindo:
+- Um carrossel de imagens que destaca a experiência de pedidos online.
+- Um cardápio acessível.
+- Uma galeria de fotos dos produtos e do ambiente.
+
+Além disso, há seções que exibem avaliações e prêmios recebidos, juntamente com informações de contato e links para as redes sociais.
+
+## Funcionalidades
+
+- Design otimizado para dispositivos móveis.
+- Utiliza o Bootstrap para um layout responsivo.
+- Ícone do WhatsApp para facilitar o contato com os clientes.
+
 ![1](https://github.com/user-attachments/assets/c9d7fb29-2ffc-4922-bba4-b853d0e976d3)
 ![2](https://github.com/user-attachments/assets/3bb3b459-1726-499f-81f7-e36fd211d0b0)
 ![3](https://github.com/user-attachments/assets/ac3adc4a-d6d8-439f-a60a-0e68121da888)
